@@ -1,0 +1,134 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form label,
+.matches h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.form input,
+.form select,
+.form textarea {
+  min-height: 34px;
+  padding: 0 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.form textarea {
+  min-height: 88px;
+  padding: 8px;
+  resize: vertical;
+}
+
+.matches {
+  min-height: 180px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #f7f9fc;
+}
+
+.matches ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.matches button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  text-align: left;
+}
+
+.matchItem {
+  border: 3px solid var(--color-match) !important;
+}
+
+.matches button:hover {
+  border-color: var(--color-primary);
+}
+
+.matchItem:hover {
+  border-color: var(--color-match) !important;
+  background: #fff7ed;
+}
+
+.matchMeta {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.hint {
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin: 0;
+}
+
+.preview dt {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.preview dd {
+  margin: 4px 0 0;
+}
+
+.previewDescription {
+  grid-column: 1 / -1;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.matchCaption {
+  margin-bottom: 10px;
+  color: var(--color-match);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .layout,
+  .preview {
+    grid-template-columns: 1fr;
+  }
+}

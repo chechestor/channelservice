@@ -1,0 +1,39 @@
+.shell {
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1440px;
+  padding: 24px 20px 40px;
+}
+
+.titleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+
+.titleRow h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.titleRow p {
+  margin-top: 4px;
+  color: var(--color-muted);
+}
+
+@media (max-width: 720px) {
+  .main {
+    padding: 16px 12px 32px;
+  }
+
+  .titleRow h1 {
+    font-size: 20px;
+  }
+}

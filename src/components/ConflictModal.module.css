@@ -1,0 +1,19 @@
+.body {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px 10px;
+}
+
+.icon {
+  color: var(--color-danger);
+  margin-top: 2px;
+}
+
+.body p {
+  grid-column: 2;
+}
+
+.meta {
+  color: var(--color-muted);
+  font-size: 13px;
+}
