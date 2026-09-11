@@ -1,9 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const pagesBase = process.env.GITHUB_ACTIONS ? "/channelservice/" : "/";
-
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: pagesBase,
-});
+  base: command === "build" ? "/channelservice/" : "/",
+}));
